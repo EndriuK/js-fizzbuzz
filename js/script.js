@@ -1,15 +1,21 @@
 //inizializzo un contatore
 
+const chessboard = document.querySelector(".chessboard");
+
 for (let i = 1; i <= 100; i++) {
-  //controllo che i sia multiplo di 3 o 5
+  const square = document.createElement("div");
+  square.classList.add("square");
+  let text = document.createTextNode(i);
+  square.append(text);
+
   if (i % 3 == 0 && i % 5 == 0) {
     console.log("FizzBuzz");
-    //controllo che i sia multiplo di 3
   } else if (i % 3 == 0) {
     console.log("Fizz");
-    //controllo che i sia multiplo di 5
   } else if (i % 5 == 0) {
     console.log("Buzz");
   }
   console.log(i);
+
+  chessboard.append(square);
 }
